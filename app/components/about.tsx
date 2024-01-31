@@ -49,9 +49,9 @@ const Abouts = () => {
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif" }} >
       <div>
-            <img src="/ombak.svg" className="w-full h-full mt-[-100px] sm:mt-[-130px] md:mt-[-170px] lg:mt-[-250] 2xl:mt-[-300px]"/>
+            <img src="/ombak.svg" className="w-full h-full mt-[-70px] sm:mt-[-130px] md:mt-[-190px] lg:mt-[-220px] 2xl:mt-[-350px]"/>
             </div>
-      <div id="about" className="h-[540px]">
+      <div id="about" className="">
         <div className="lg:text-4xl text-2xl pt-[10px] md:pt-[50px] lg:pt-[90px]">
           <h1 className=" font-semibold text-center py-8 lg:py-12 text-[#1D1D1F]">
             ABOUT ME
