@@ -7,11 +7,11 @@ export default function SubmitBtn() {
   return (
     <button
       type="submit"
-      className="bg-blue-500 hover:bg-green-500 text-white h-8 sm:h-10 md:h-12 rounded-lg outline-none px-2"
+      className="bg-blue-500 hover:bg-green-500 text-white h-8 sm:h-10 md:h-12 rounded-lg outline-none px-2 flex items-center justify-center"
       disabled={pending}
     >
       {pending ? (
-        <div className="animate-spin w-2 rounded-full border-t-4 border-b-4 border-white h-8 "></div>
+        <div className="animate-spin rounded-full border-t-4 border-b-4 border-white h-5 w-5"></div>
       ) : (
         <>
           Submit{""}
