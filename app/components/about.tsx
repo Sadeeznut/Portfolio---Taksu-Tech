@@ -58,7 +58,7 @@ const Abouts = () => {
           </h1>
 
           <div className="text-center text-sm lg:px-36 px-10 lg:text-xl">
-    <p>I'm Sadewa Bharaka Mahaputra. Having an education from SMK TI BALI GLOBAL DENPASAR
+    <p>I am Sadewa Bharaka Mahaputra. Having an education from SMK TI BALI GLOBAL DENPASAR
     majoring in Software Engineering makes me interested in becoming a front-end web development. I plan to
     dig deeper into front-end, as I believe that with a combination of technical skills and a
       deep understanding of user needs, I can

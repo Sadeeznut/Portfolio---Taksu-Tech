@@ -21,7 +21,7 @@ const Contact = () => {
     <div id="contact" className="">
       <h1 className=" text-white font-semibold text-lg lg:text-4xl md:text-3xl sm:text-2xl pt-7">Contact Me</h1>
       <p className="pt-3 text-white text-xs lg:text-base md:text-sm sm:text-xs lg:px-0 md:px-12 sm:px-8">
-        Feel free to communicate or ask questions through the form below or by sending a direct email. I'll try my best to get back to you promptly. My inbox is always open, whether for inquiries or just to say hi. Thank you!
+        Feel free to communicate or ask questions through the form below or by sending a direct email. I will try my best to get back to you promptly. My inbox is always open, whether for inquiries or just to say hi. Thank you!
       </p>
     </div>
           <form
