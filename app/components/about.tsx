@@ -49,7 +49,7 @@ const Abouts = () => {
   return (
     <div style={{ fontFamily: "'Poppins', sans-serif" }} >
       <div>
-            <img src="/ombak.svg" className="w-full h-full mt-[-70px] sm:mt-[-130px] md:mt-[-190px] lg:mt-[-220px] 2xl:mt-[-350px]"/>
+            <img src="/ombak.svg" className="w-full h-full mt-[-58px] sm:mt-[-130px] md:mt-[-190px] lg:mt-[-220px] 2xl:mt-[-350px]"/>
             </div>
       <div id="about" className="">
         <div className="lg:text-4xl text-2xl pt-[10px] md:pt-[50px] lg:pt-[90px]">
