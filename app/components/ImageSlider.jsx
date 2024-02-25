@@ -3,21 +3,21 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 // Import Image from next/image
 import Image from 'next/image';
 
-const ImageSlider: React.FC = () => {
-  const images: string[] = [
+const ImageSlider = () => {
+  const images = [
     "/2.jpg",
     "/3.jpg",
     "/1.jpg",
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleNextClick = (): void => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  const handleNextClick = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
   };
 
-  const handlePrevClick = (): void => {
-    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  const handlePrevClick = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const ImageSlider: React.FC = () => {
 
   return ( 
     <div className="pt-16" id="project">
-      <h1 className=" font-semibold text-center pb-4 lg:pb-8 pt-8 lg:pt-12 text-[#f0f0f0] lg:text-4xl text-2xl" style={{ fontFamily: "Poppins, sans-serif" }}>MY PROJECT</h1>
+      <h1 className="font-semibold text-center pb-4 lg:pb-8 pt-8 lg:pt-12 text-[#f0f0f0] lg:text-4xl text-2xl" style={{ fontFamily: "Poppins, sans-serif" }}>MY PROJECT</h1>
       <div className="2xl:px-36 lg:px-28 sm:px-16 px-14 md:relative w-[100%] mx-auto">
         <div className="overflow-hidden relative">
           <div className="transition-transform ease-in-out duration-500" style={{ transform: `translateX(-${currentImageIndex * (100 / images.length)}%)`, width: `${images.length * 100}%` }}>
