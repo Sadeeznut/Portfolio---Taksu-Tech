@@ -24,7 +24,7 @@ const About = () => {
           {/* INTRO */}
           <div className="bg-[#1c1c1c]  rounded-xl md:row-start-1 md:row-span-2 md:col-span-5 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-14">
-            👋 I'M SADEWA
+            👋 I AM SADEWA
             </h1>
             <p className="text-base md:text-sm lg:text-base">
             Having an education from SMK TI BALI GLOBAL DENPASAR majoring in Software Engineering makes me interested in becoming a front-end web development.
