@@ -95,19 +95,24 @@ const About = () => {
             className=" rounded-xl md:row-start-4 md:col-span-2 md:row-span-2
             flex items-start gap-1 justify-center"
           >
-            <a href="https://wa.me/message/NKHCZP77TOE3K1 " className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24 xs:h-24">
+            <a href="https://wa.me/message/NKHCZP77TOE3K1" className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24 xs:h-24">
+              
               <img
                 src="/wha.svg"
                 className="w-full h-full "
               />
+
             </a>
             <a href="https://www.instagram.com/ig.sadee/" className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24 xs:h-24">
+
               <img 
                 src="/ig.svg"
                 className="w-full h-full "
               />
+
             </a>
             <a href="" className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24 xs:h-24">
+
               <img
                 src="/twiter.svg"
                 className="w-full h-full"
