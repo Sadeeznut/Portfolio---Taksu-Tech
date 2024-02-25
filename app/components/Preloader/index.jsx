@@ -1,8 +1,8 @@
-'use client';
-import styles from './style.module.scss';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { opacity, slideUp } from './anim';
+"u/se client";
+import styles from "./style.module.scss";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { opacity, slideUp } from "./anim";
 
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "I am", "sadewa"]
 
@@ -21,8 +21,8 @@ export default function Index() {
         }, index == 0 ? 1000 : 230)
     }, [index])
 
-    const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`
-    const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height} 0 ${dimension.height}  L0 0`
+    const initialPath = "M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height + 300} 0 ${dimension.height}  L0 0"
+    const targetPath = "M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width/2} ${dimension.height} 0 ${dimension.height}  L0 0"
 
     const curve = {
         initial: {

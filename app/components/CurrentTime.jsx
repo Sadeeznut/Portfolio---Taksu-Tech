@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const CurrentTime = () => {
   const [currentTime, setCurrentTime] = useState("");
@@ -7,8 +7,8 @@ const CurrentTime = () => {
     const intervalId = setInterval(() => {
       const date = new Date();
       const options = {
-        hour: 'numeric',
-        minute: 'numeric',
+        hour: "numeric",
+        minute: "numeric",
         hour12: true
       };
       const timeString = date.toLocaleTimeString(undefined, options);

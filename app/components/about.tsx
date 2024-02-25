@@ -7,7 +7,7 @@ const About = () => {
     <>
       <div
         className="bg-[#0f0f0f] mb-4"
-        style={{ fontFamily: "'Poppins', sans-serif" }}
+        style={{ fontFamily: "Poppins , sans-serif" }}
       >
         <div
           className="grid gap-1 md:grid-cols-8 sm:grid-cols-1 xl:grid-cols-10 2xl:grid-cols-10 2xl:mx-24 lg:mx-14 md:mx-1 text-[#d1d1d1] text-center md:text-left lg:text-left"
