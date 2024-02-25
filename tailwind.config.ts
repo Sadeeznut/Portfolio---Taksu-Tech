@@ -12,7 +12,7 @@ const config: Config = {
         body: ['Poppins', 'sans-serif'],
       },
       backgroundImage: {
-        'parallax': 'url("/parallax.jpg")',
+        'parallax': 'url("/hero.jpg")',
       },
     },
   },

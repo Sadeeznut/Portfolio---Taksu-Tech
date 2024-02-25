@@ -12,7 +12,7 @@ const Contact = () => {
   return (
 
     <div style={{ fontFamily: "'Poppins', sans-serif" }}>
-      <img src="laut.svg" className="w-full h-full" style={{marginTop: '-300px'}} />
+      <img src="laut2.svg" className="w-full h-full"  />
     <div className="bg-[#1c1c1c]">
 
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">

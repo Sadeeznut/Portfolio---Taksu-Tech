@@ -1,0 +1,13 @@
+.landing{ 
+    background-color: #0f0f0f;
+    position: relative;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+
+    img{
+      position: absolute;
+      object-fit: cover;  
+    }
+}
+  
