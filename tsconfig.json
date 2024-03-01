@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/navbar.tsx", "app/components/about.tsx", "app/components/ImageSlider.tsx", "app/components/project.tsx", "app/components/contact.tsx", "app/components/CurrentTime.jsx", "app/components/footer.tsx", "app/components/submit-btn.tsx", "app/components/TabButton.tsx", "app/components/Navbar/index.jsx", "app/context/active-section-context.jsx", "app/Projects/allproject.jsx", "app/layout.tsx", "app/page.jsx", "app/components/lib/utils.ts", "app/components/lib/format"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/navbar.tsx", "app/components/about.jsx", "app/components/ImageSlider.tsx", "app/components/project.tsx", "app/components/contact.tsx", "app/components/CurrentTime.jsx", "app/components/footer.tsx", "app/components/submit-btn.tsx", "app/components/TabButton.tsx", "app/components/Navbar/index.jsx", "app/context/active-section-context.jsx", "app/Projects/allproject.jsx", "app/layout.tsx", "app/page.jsx", "app/components/lib/utils.ts", "app/components/lib/format"],
   "exclude": ["node_modules"]
 }
