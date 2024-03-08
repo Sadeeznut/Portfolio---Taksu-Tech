@@ -1,10 +1,32 @@
 "use client";
 
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 import CurrentTime from "@/app/components/CurrentTime";
 
 const About = () => {
+  const [error, setError] = useState(null);
+  const [Aboutmee, setAboutmee] = useState(null);
 
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:1337/api/aboutmee")
+      .then((response) => {
+        setAboutmee(response.data.data.attributes);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }, []);
+
+  if (error) {
+    return <div>An error occurred: {error.message}</div>;
+  }
+
+  if (!Aboutmee) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -19,7 +41,7 @@ const About = () => {
           {/* IMG */}
           <div className="bg-[#1d1d1d]  rounded-xl md:row-start-1 md:row-span-4 md:col-span-3 h-auto">
             <img
-              src="/hero.jpg"
+              src="http://localhost:1337/uploads/hero_3cb1cbad82.jpg"
               className="object-cover w-full h-full rounded-xl"
             />
           </div>
@@ -27,58 +49,58 @@ const About = () => {
           {/* INTRO */}
           <div className="bg-[#1c1c1c]  rounded-xl md:row-start-1 md:row-span-2 md:col-span-5 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-14">
-            👋 I'M SADEWA
+              {Aboutmee.t_name}
             </h1>
             <p className="text-base md:text-sm lg:text-base">
-            Having an education from SMK TI BALI GLOBAL DENPASAR majoring in Software Engineering makes me interested in becoming a front-end web development.
+              {Aboutmee.desc_name}
             </p>
           </div>
 
           {/* SKILLS */}
           <div className="bg-[#1d1d1d] md:row-start-1 md:row-span-1 md:col-span-2 p-6 rounded-xl text-center">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-14">
-              SKILLS
+              {Aboutmee.t_skills}
             </h1>
             <p className="text-base md:text-sm lg:text-sm">
-            Front-end Developer
+              {Aboutmee.skill_1}
             </p>
             <p className="text-base md:text-sm lg:text-sm">
-            Web Designer
+              {Aboutmee.skill_2}
             </p>
           </div>
 
           {/* PLAN */}
           <div className="bg-[#1d1d1d]  rounded-xl md:row-start-3 md:col-span-3 md:row-span-2 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-8">
-              PLAN
+              {Aboutmee.t_plan}
             </h1>
 
             <p className="text-sm md:text-xs lg:text-sm">
-            I plan to dig deeper into front-end, as I believe that with a combination of technical skills and a deep understanding of user needs, I can create web applications that are not only functional, but also meet high design standards
+              {Aboutmee.desc_plan}
             </p>
           </div>
 
           {/* EDUCATION */}
           <div className="bg-[#1c1c1c]  rounded-xl md:row-start-3 md:col-span-2 md:row-span-2 p-8 lg:p-8 md:p-4 sm:p-8">
             <h1 className="text-3xl md:text-lg lg:text-2xl font-bold mb-8">
-              EDUCATION
+              {Aboutmee.t_education}
             </h1>
 
             <div className="flex justify-between text-xs md:text-xs lg:text-xs mb-2">
-              <p className="text-left">-TK TITI DHARMA</p>
-              <p className="text-right text-gray-400">2012-2013</p>
+              <p className="text-left">{Aboutmee.edu_tk}</p>
+              <p className="text-right text-gray-400">{Aboutmee.desc_tk}</p>
             </div>
             <div className="flex justify-between text-xs md:text-xs lg:text-xs mb-2">
-              <p className="text-left">-SDN 24 PEMECUTAN</p>
-              <p className="text-right text-gray-400">2013-2019</p>
+              <p className="text-left">{Aboutmee.edu_sd}</p>
+              <p className="text-right text-gray-400">{Aboutmee.desc_sd}</p>
             </div>
             <div className="flex justify-between text-xs md:text-xs lg:text-xs mb-2">
-              <p className="text-left">-SMPN 2 DENPASAR</p>
-              <p className="text-right text-gray-400">2019-2022</p>
+              <p className="text-left">{Aboutmee.edu_smp}</p>
+              <p className="text-right text-gray-400">{Aboutmee.desc_smp}</p>
             </div>
             <div className="flex justify-between text-xs md:text-xs lg:text-xs mb-2">
-              <p className="text-left">-SMK TI BALI GLOBAL DENPASAR</p>
-              <p className="text-right text-gray-400">2022-2025</p>
+              <p className="text-left">{Aboutmee.edu_smk}</p>
+              <p className="text-right text-gray-400">{Aboutmee.desc_smk}</p>
             </div>
           </div>
 
@@ -86,7 +108,7 @@ const About = () => {
           <div className="bg-[#1d1d1d] md:row-start-2 md:col-span-2 rounded-xl md:row-span-2 p-6 flex flex-col items-center justify-center">
             <CurrentTime />
             <p className="text-xs md:text-xs lg:text-xs text-gray-400">
-              Curent local time
+              {Aboutmee.desc_time}
             </p>
             
           </div>
@@ -100,19 +122,19 @@ const About = () => {
           >
             <a className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-16">
               <img
-                src="wha.svg"
+                src="http://localhost:1337/uploads/wha_12656cd19a.svg"
                 className="w-full h-full "
               />
             </a>
             <a className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24">
               <img 
-                src="/twiter.svg"
+                src="http://localhost:1337/uploads/twiter_f3b0218d4d.svg"
                 className="w-full h-full "
               />
             </a>
             <a className="xl:h-24 lg:h-24 md:h-16 h-24 sm:h-24">
               <img
-                src="/ig.svg"
+                src="http://localhost:1337/uploads/ig_2c83770c09.svg"
                 className="w-full h-full"
               />
               
@@ -123,30 +145,30 @@ const About = () => {
           {/* ANOTHER LINK */}
           <div className="bg-[#1c1c1c] rounded-xl md:row-start-5 md:col-span-3 md:row-span-1 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-8">
-              I USE
+              {Aboutmee.t_use}
             </h1>
             <div className="flex gap-2 xl:h-10 lg:h-10 md:h-6 h-8 sm:h-8">
-              <img src="/vs-code.svg" />
-              <img src="/figma.svg" />
-              <img src="/spotify.svg" />
+              <img src="http://localhost:1337/uploads/vs_code_d11ca99766.svg" />
+              <img src="http://localhost:1337/uploads/figma_3347cf63a5.svg" />
+              <img src="http://localhost:1337/uploads/spotify_d052ee9016.svg" />
             </div>
           </div>
 
           {/* I USE */}
           <div className="bg-[#1c1c1c]  rounded-xl md:row-start-5 md:col-span-5 md:row-span-1 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-8">
-              TECH STACKS
+              {Aboutmee.t_stack}
             </h1>
 
             <div className="flex gap-2 xl:h-10 lg:h-10 md:h-6 h-8 sm:h-8">
-              <img src="/html.svg" />
-              <img src="/css.svg" />
-              <img src="/php.svg" />
-              <img src="/js.svg" />
-              <img src="/bs.svg" />
-              <img src="/nextjs.svg" />
-              <img src="/tailwind.svg" />
-              <img src="/strapi.svg" />
+              <img src="http://localhost:1337/uploads/html_fde4ecf34d.svg" />
+              <img src="http://localhost:1337/uploads/css_9ff55d107d.svg" />
+              <img src="http://localhost:1337/uploads/js_92068e4710.svg" />
+              <img src="http://localhost:1337/uploads/php_c6f220ea4d.svg" />
+              <img src="http://localhost:1337/uploads/devicon_bootstrap_eeff6caaf9.svg" />
+              <img src="http://localhost:1337/uploads/nextjs_871dc3ff18.svg" />
+              <img src="http://localhost:1337/uploads/tailwind_a1f51d0221.svg" />
+              <img src="http://localhost:1337/uploads/strapi_6ca85d0af9.svg" />
             </div>
           </div>
         </div>

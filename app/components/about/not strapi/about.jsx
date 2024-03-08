@@ -135,7 +135,7 @@ const About = () => {
           {/* I USE */}
           <div className="bg-[#1c1c1c]  rounded-xl md:row-start-5 md:col-span-5 md:row-span-1 p-6">
             <h1 className="text-3xl md:text-xl lg:text-3xl font-bold mb-8">
-              TECH STACKS
+              SKILL TECH
             </h1>
 
             <div className="flex gap-2 xl:h-10 lg:h-10 md:h-6 h-8 sm:h-8">
