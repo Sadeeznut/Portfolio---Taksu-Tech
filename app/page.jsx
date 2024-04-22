@@ -1,7 +1,7 @@
 "use client"
 
 import { Toaster } from "react-hot-toast";
-import About from "./components/about";
+import About from "./components/about/not strapi/about";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
