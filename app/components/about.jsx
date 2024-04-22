@@ -1,6 +1,4 @@
 "use client";
-
-
 import CurrentTime from "@/app/components/CurrentTime";
 
 const About = () => {
